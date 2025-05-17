@@ -76,10 +76,10 @@ endmodule
 ![Screenshot 2024-12-10 130921](https://github.com/user-attachments/assets/a53eabae-02ca-4be4-bca1-1e3a29b0187c)
 
 
-Developed by:ANBUDURAI.A
+Developed by:THARUN M
 
 
-RegisterNumber:212224230018
+RegisterNumber:212224230288
 
 
 **RTL realization**
