@@ -1,4 +1,7 @@
 # BOOLEAN_FUNCTION_MINIMIZATION
+## NAME:M tharun
+## REG NO:212224230288
+
 
 **AIM:**
 
@@ -18,16 +21,6 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Logic Diagram**
 
-  FUNCTION 1 K-MAP
-
-  
-![Screenshot 2024-12-10 130855](https://github.com/user-attachments/assets/5d6a470f-d6be-4814-928f-37a8f74b3398)
-
-   FUNCTION 2 K-MAP
-![Screenshot 2024-12-10 130904](https://github.com/user-attachments/assets/077cec70-24ae-4dcc-b0f6-45b9716f8ae7)
-
-
-
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -43,73 +36,34 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
-```
-FUNCTION 1
+    module boolean(a,b,c,d,w,x,y,z,f1,f2);
+    input a,b,c,d,w,x,y,z;
+    output f1,f2;
+    wire adash,bdash,cdash,ddash,ydash,p,q,r,s,t,u;
+    not(adash,a);
+    not(bdash,b);
+    not(cdash,c);
+    not(ddash,d);
+    not(ydash,y);
+    and(p,bdash,ddash);
+    and(q,adash,b,d);
+    and(r,a,b,cdash);
+    and(s,w,y);
+    and(t,x,y);
+    and(u,ydash,z);
+    or(f1,p,q,r);
+    or(f2,s,t,u);
+    endmodule
 
-i)
-module funct1(a,b,c,d,f1);
-input a,b,c,d;
-output f1;
-assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
-endmodule
-
-
-FUNCTION 2
-
-
-ii)
-module funct2(w,x,y,z,f2);
-input w,x,y,z;
-output f2;
-assign f2=((~y & z)|( w & y )|(x & y));
-endmodule
-```
-
-   FUNCTION 1
-
-
-![Screenshot 2024-12-10 130914](https://github.com/user-attachments/assets/d5357ef7-67bb-41e1-bfbf-23ae66e6dffc)
-
-   FUNCTION 2
-
-![Screenshot 2024-12-10 130921](https://github.com/user-attachments/assets/a53eabae-02ca-4be4-bca1-1e3a29b0187c)
-
-
-Developed by:THARUN M
-
-
-RegisterNumber:212224230288
-
+**output**
 
 **RTL realization**
-
-**Output:**
-
-**RTL**
-
-   FUNCTION 1
+<img width="1918" height="1140" alt="boolean RTL" src="https://github.com/user-attachments/assets/f8840e03-4a73-47a0-ab5d-0ec500a6aa5b" />
 
 
-![Screenshot 2024-12-10 130928](https://github.com/user-attachments/assets/b4e996bf-d92d-4180-8221-eeef67884cd0)
+**University Timing Diagram**
 
-   FUNCTION 2
-
-
-![Screenshot 2024-12-10 130935](https://github.com/user-attachments/assets/8e4bfdec-b657-47f5-bf3f-989f5ee42813)
-
-
-
-**Timing Diagram**
-
-   FUNCTION 1
-
-![Screenshot 2024-12-10 130944](https://github.com/user-attachments/assets/bbde9f23-db1f-4530-86e6-ea08c2454349)
-
-
-   FUNCTION 2
-
-![Screenshot 2024-12-10 143619](https://github.com/user-attachments/assets/a9804bf4-5da4-4fba-8332-59aca9d6e562)
+<img width="1918" height="1132" alt="RTL2" src="https://github.com/user-attachments/assets/4b53c6a4-1942-4d6a-aef7-8fc7e43c5459" />
 
 
 **Result:**
